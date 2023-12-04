@@ -9,5 +9,13 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+  let start = new Date().getTime();
+  let sum = 0;
+  for (var i = 1; i <= n; i++) {
+    sum += i;
+  }
+  let end = new Date().getTime();
+  let totalTime = (end - start) / 1000; // Divide By 1000 to Convert Miliseconds To Seconds
+  //console.log(totalTime);
+  return totalTime;
 }
